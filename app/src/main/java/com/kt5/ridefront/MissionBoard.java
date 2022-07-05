@@ -4,14 +4,38 @@ import java.io.Serializable;
 import java.time.LocalDate;
 
 public class MissionBoard implements Serializable {
+    private Long mainno;
     private String missionTitle;
     private String missionLocation;
     private Long missionPeople;
-    private LocalDate missonStartDay;
-    private LocalDate missonEndDay;
+    private LocalDate missionStartDay;
+    private LocalDate missionEndDay;
     private Long joinCoin;
-    private String missonLeader;
-    private String missonState;
+    private String missionLeader;
+    private String missionState;
+
+    @Override
+    public String toString() {
+        return "MissionBoard{" +
+                "mainno=" + mainno +
+                ", missionTitle='" + missionTitle + '\'' +
+                ", missionLocation='" + missionLocation + '\'' +
+                ", missionPeople=" + missionPeople +
+                ", missionStartDay=" + missionStartDay +
+                ", missionEndDay=" + missionEndDay +
+                ", joinCoin=" + joinCoin +
+                ", missionLeader='" + missionLeader + '\'' +
+                ", missionState='" + missionState + '\'' +
+                '}';
+    }
+
+    public Long getMainno() {
+        return mainno;
+    }
+
+    public void setMainno(Long mainno) {
+        this.mainno = mainno;
+    }
 
     public String getMissionTitle() {
         return missionTitle;
@@ -37,20 +61,20 @@ public class MissionBoard implements Serializable {
         this.missionPeople = missionPeople;
     }
 
-    public LocalDate getMissonStartDay() {
-        return missonStartDay;
+    public LocalDate getMissionStartDay() {
+        return missionStartDay;
     }
 
-    public void setMissonStartDay(LocalDate missonStartDay) {
-        this.missonStartDay = missonStartDay;
+    public void setMissionStartDay(LocalDate missionStartDay) {
+        this.missionStartDay = missionStartDay;
     }
 
-    public LocalDate getMissonEndDay() {
-        return missonEndDay;
+    public LocalDate getMissionEndDay() {
+        return missionEndDay;
     }
 
-    public void setMissonEndDay(LocalDate missonEndDay) {
-        this.missonEndDay = missonEndDay;
+    public void setMissionEndDay(LocalDate missionEndDay) {
+        this.missionEndDay = missionEndDay;
     }
 
     public Long getJoinCoin() {
@@ -61,33 +85,19 @@ public class MissionBoard implements Serializable {
         this.joinCoin = joinCoin;
     }
 
-    public String getMissonLeader() {
-        return missonLeader;
+    public String getMissionLeader() {
+        return missionLeader;
     }
 
-    public void setMissonLeader(String missonLeader) {
-        this.missonLeader = missonLeader;
+    public void setMissionLeader(String missionLeader) {
+        this.missionLeader = missionLeader;
     }
 
-    public String getMissonState() {
-        return missonState;
+    public String getMissionState() {
+        return missionState;
     }
 
-    public void setMissonState(String missonState) {
-        this.missonState = missonState;
-    }
-
-    @Override
-    public String toString() {
-        return "MissionBoard{" +
-                "missionTitle='" + missionTitle + '\'' +
-                ", missionLocation='" + missionLocation + '\'' +
-                ", missionPeople=" + missionPeople +
-                ", missonStartDay=" + missonStartDay +
-                ", missonEndDay=" + missonEndDay +
-                ", joinCoin=" + joinCoin +
-                ", missonLeader='" + missonLeader + '\'' +
-                ", missonState='" + missonState + '\'' +
-                '}';
+    public void setMissionState(String missionState) {
+        this.missionState = missionState;
     }
 }
